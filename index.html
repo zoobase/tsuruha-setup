@@ -10,41 +10,84 @@ body {
     height: 100vh;
 
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     font-family: Meiryo, sans-serif;
+    background: #f5f5f5;
+}
+
+.container {
     text-align: center;
 }
 
+h1 {
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #666;
+    margin-bottom: 30px;
+}
+
 .button {
-    display: inline-block;
-    background: #0078d7;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 8px;
+    display: block;
+    width: 340px;
+    margin: 15px auto;
+    padding: 18px;
+
+    border-radius: 10px;
     text-decoration: none;
+    color: white;
     font-size: 20px;
     font-weight: bold;
 }
 
-.button:hover {
-    background: #106ebe;
+.setup {
+    background: #0078d7;
+}
+
+.updater {
+    background: #28a745;
+}
+
+.note {
+    margin-top: 30px;
+    color: #666;
+    font-size: 14px;
 }
 </style>
 
 </head>
 <body>
 
+<div class="container">
+
 <h1>領収書発行通知システム</h1>
 
-<p>初回インストール用セットアップをダウンロードしてください</p>
+<div class="description">
+セットアップ方法を選択してください。
+</div>
 
-<a class="button"
+<a class="button setup"
    href="https://tsuruha-update.zoobase.workers.dev/setup">
-   初回セットアップ
+  新規店舗向け<br>
+  初回セットアップ
 </a>
+
+<a class="button updater"
+   href="https://tsuruha-update.zoobase.workers.dev/setup">
+  既存店舗向け<br>
+  アップデーター導入
+</a>
+
+<div class="note">
+初めて導入する場合は「初回セットアップ」を実行してください。<br>
+既に領収書発行通知システムを利用中の店舗は<br>
+「アップデーター導入」を実行してください。
+</div>
+
+</div>
 
 </body>
 </html>
